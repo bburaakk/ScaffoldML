@@ -1,0 +1,2 @@
+class DataLoaderError(Exception):
+    pass
