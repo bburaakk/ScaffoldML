@@ -1,17 +1,15 @@
 import logging
-import os
 import pandas as pd
 from pathlib import Path
 from typing import Optional, Union
-
 from .error_messages import DataReadingErrorMessages as EM, SUPPORTED_FILE_EXTENSIONS
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger(__name__)
 
 data_reader_funtions= {
-    "csv": pd.read_csv,
-    "parquet": pd.read_parquet,
+    ".csv": pd.read_csv,
+    ".parquet": pd.read_parquet,
 }
 
 class DataLoader:
@@ -33,7 +31,7 @@ class DataLoader:
             logger.error(EM.INVALID_FILE_PATH_TYPE.value.format(type=type(file_path)))
             raise TypeError(EM.INVALID_FILE_PATH_TYPE.value.format(type=type(file_path)))
 
-        if not os.Path(file_path).exists():
+        if not Path(file_path).exists():
             logger.error(EM.FILE_NOT_FOUND.value.format(file_path=file_path))
             raise FileNotFoundError(EM.FILE_NOT_FOUND.value.format(file_path=file_path))
 
