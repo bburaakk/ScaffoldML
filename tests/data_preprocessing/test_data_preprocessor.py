@@ -4,9 +4,9 @@ import numpy as np
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.impute import SimpleImputer
 
-from claims_ml.src.data_preprocessing import DataPreprocessor
-from claims_ml.src.data_preprocessing import load_config, PreprocessorConfig
-from claims_ml.src.data_loader import DataLoader
+from ScaffoldML.src.data_preprocessing import DataPreprocessor
+from ScaffoldML.src.data_preprocessing import load_config, PreprocessorConfig
+from ScaffoldML.src.data_loader import DataLoader
 
 
 def _create_test_data_and_expectations():
