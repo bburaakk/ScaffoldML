@@ -1,6 +1,6 @@
 import pytest
 
-from claims_ml.src.data_preprocessing import DataPreprocessor, load_config
+from ScaffoldML.src.data_preprocessing import DataPreprocessor, load_config
 
 @pytest.fixture
 def preprocessor(config_path):
