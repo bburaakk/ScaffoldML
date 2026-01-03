@@ -1,4 +1,4 @@
-from claims_ml.src.data_loader import DataLoader
+from ScaffoldML.src.data_loader import DataLoader
 import pytest
 
 @pytest.fixture
